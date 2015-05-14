@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TabHost
+        android:id="@+id/TabHost01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" > <!-- TabWidget used to creat tabs -->
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" >
+
+                <!-- tab N°1 -->
+                <!-- Inclusion of the interface -->
+
+                <include
+                    android:id="@+id/home_tab"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/home_tab" >
+                </include> <!-- tab N°2 -->
+                <!-- Inclusion of the interface -->
+
+                <include
+                    android:id="@+id/ordernow_tab"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/ordernow_tab" >
+                </include> <!-- tab N°3 -->
+                <!-- Inclusion of the interface -->
+
+                <include
+                    android:id="@+id/gallery_tab"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/gallery_tab" >
+                </include>
+
+                <!-- tab N°4 -->
+                <!-- Inclusion of the interface -->
+
+                <include
+                    android:id="@+id/contact_tab"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/contact_tab" >
+                </include>
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-4dp"
+                android:layout_weight="0" />
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
